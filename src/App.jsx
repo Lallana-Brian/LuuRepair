@@ -1,3 +1,4 @@
+import { BrowserRouter } from "react-router-dom";
 import HomeSwiper from "./components/swiperHome/HomeSwiper";
 import Navbar from "./components/navbar/Navbar";
 import { useEffect } from "react";
@@ -8,10 +9,10 @@ function App() {
   }, []);
 
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
       <HomeSwiper />
-    </>
+    </BrowserRouter>
   );
 }
 

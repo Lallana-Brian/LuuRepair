@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import Btn from "../btn/Btn";
+// Importar los íconos de Lucide React
+import { Menu, X } from "lucide-react"; // Cambié la importación de react-feather a lucide-react
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +17,8 @@ export default function Navbar() {
       <div className="md:hidden flex items-center justify-between w-full z-10">
         {/* Botón hamburguesa */}
         <button onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={28} /> : <Menu size={28} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}{" "}
+          {/* Usando los íconos de Lucide React */}
         </button>
 
         {/* Logo centrado */}
@@ -25,46 +28,7 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Botón teléfono a la derecha */}
-        <div className="w-2/3 flex justify-end">
-          <a
-            href="https://wa.me/3777674366"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white hover:bg-green-600 text-black font-semibold py-1 px-3 rounded-md text-sm transition sm:bg-blue-500 md:bg-red-500"
-          >
-            📞+3777 67-4366
-          </a>
-        </div>
-      </div>
-
-      {/* Navbar para pantallas medianas y grandes */}
-      <div className="hidden md:flex items-center justify-between w-full z-10">
-        {/* Logo */}
-        <div className="w-32">{/* Aquí irá el logo */}LuuRepairs</div>
-
-        {/* Menú navegación */}
-        <div className="flex items-center space-x-10">
-          <a href="#" className="hover:text-gray-400">
-            Inicio
-          </a>
-          <a href="#" className="hover:text-gray-400">
-            Acerca
-          </a>
-          <a href="#" className="hover:text-gray-400">
-            Contacto
-          </a>
-        </div>
-
-        {/* Botón teléfono */}
-        <div className="w-48 flex justify-end">
-          <a
-            href="tel:+1234567890"
-            className="bg-buttonHover hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg text-base transition"
-          >
-            📞 +1 234 567 890
-          </a>
-        </div>
+        <Btn text="+3777674366"></Btn>
       </div>
 
       {/* Menú hamburguesa desplegable (solo en móvil) */}
@@ -73,7 +37,7 @@ export default function Navbar() {
           isOpen ? "flex" : "hidden"
         }`}
       >
-        <a href="#" className="block hover:text-gray-400 py-2">
+        <a href="#" className="block hover:bg-yellow-500 ">
           Inicio
         </a>
         <a href="#" className="block hover:text-gray-400 py-2">
@@ -82,6 +46,30 @@ export default function Navbar() {
         <a href="#" className="block hover:text-gray-400 py-2">
           Contacto
         </a>
+      </div>
+
+      {/* Navbar para pantallas medianas y grandes */}
+      <div className="hidden md:flex items-center justify-between w-full z-10">
+        <div className="w-32">{/* Aquí irá el logo */}LuuRepairs</div>
+        <div className="flex items-center space-x-10">
+          <a href="#" className="hover:text-yellow-500">
+            Inicio
+          </a>
+          <a href="#" className="hover:text-yellow-500">
+            Servicio
+          </a>
+          <a href="#" className="hover:text-yellow-500">
+            Contacto
+          </a>
+        </div>
+        <div className="w-48 flex justify-end">
+          <a
+            href="tel:+1234567890"
+            className="bg-buttonHover  text-white font-semibold py-2 px-4 rounded-lg text-base transition"
+          >
+            📞+3777 67-4366
+          </a>
+        </div>
       </div>
     </nav>
   );

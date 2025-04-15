@@ -29,7 +29,7 @@ export default {
       },
       colors: {
         mycolor: "#212121",
-        beige: "#E5DCBC",
+        beige: "#FFF085",
         header: "rgba(255, 255, 255, 0.8)",
         title: "hsl(250, 8%, 15%)",
         nav: "hsl(250, 5%, 24%)",
