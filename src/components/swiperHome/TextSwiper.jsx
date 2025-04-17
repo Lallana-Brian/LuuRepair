@@ -1,5 +1,4 @@
-// Importar el ícono ArrowRight de Lucide React
-import { ArrowRight } from "lucide-react"; // Cambié la importación de react-feather a lucide-react
+import { ArrowRight } from "lucide-react";
 import Btn from "../btn/Btn";
 
 const TextSwiper = () => {

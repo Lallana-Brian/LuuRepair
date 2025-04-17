@@ -7,3 +7,8 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", "Roboto", "Helvetica Neue",
     Arial, sans-serif;
 }
+
+.clip-arrow {
+  clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 40% 100%, 25% 50%);
+  border-radius: 1rem;
+}
