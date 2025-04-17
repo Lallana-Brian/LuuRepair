@@ -4,14 +4,14 @@ import { featuredImages } from "../../assets/data/dataStore"; // ← esta es la 
 const FeaturedServices = () => {
   return (
     <section className="py-16 px-6 bg-white">
-      <h1 className="text-3xl font-bold text-center mb-12">
-        Nuestros Servicios
+      <h1 className="text-5xl font-bold text-center justify-between mb-20 mt-20">
+        Servicios que ofrecemos
       </h1>
       <div className="flex flex-wrap justify-center gap-8">
         {featuredImages.map((item, index) => (
           <div
             key={index}
-            className="relative w-80 bg-[#fef08a] rounded-xl overflow-hidden shadow-md"
+            className="relative w-80 h-96 bg-[#fef08a] rounded-xl overflow-hidden shadow-md"
           >
             {/* Imagen con clip-path */}
             <div className="relative h-48 w-full">
@@ -22,7 +22,7 @@ const FeaturedServices = () => {
               />
             </div>
             {/* Texto */}
-            <div className="p-6">
+            <div className="p-6 mt-10">
               <h2 className="text-xl font-semibold">{item.title}</h2>
               <h3 className="text-gray-600 mt-2">{item.subtitle}</h3>
             </div>

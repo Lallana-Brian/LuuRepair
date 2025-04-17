@@ -21,17 +21,17 @@ import phoneImg from "../images/swiper/phoneRepair.jpg";
 
 export const featuredImages = [
   {
-    title: "Mobile device repairs",
+    title: "Reparación de Celulares",
     subtitle: "Errores de software y problemas físicos.",
     image: phoneImg,
   },
   {
-    title: "Mobile device repairs",
+    title: "Reparacion de PC",
     subtitle: "Errores de software y problemas físicos.",
     image: phoneImg,
   },
   {
-    title: "Mobile device repairs",
+    title: "Reparacion de Laptops",
     subtitle: "Errores de software y problemas físicos.",
     image: phoneImg,
   },
