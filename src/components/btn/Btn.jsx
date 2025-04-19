@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 const Btn = ({
   onClick,
   text = "Botón",
-  bgColor = "bg-yellow-400",
   textColor = "text-black",
+  bgColor = "bg-beige",
   hoverBgColor = "hover:bg-yellow-500",
   borderColor = "border-yellow-500",
   className = "",

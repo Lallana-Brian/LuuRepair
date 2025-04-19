@@ -1,17 +1,16 @@
-// Importar el ícono ArrowRight de Lucide React
-import { ArrowRight } from "lucide-react"; // Cambié la importación de react-feather a lucide-react
+import { ArrowRight } from "lucide-react";
 import Btn from "../btn/Btn";
 
 const TextSwiper = () => {
   return (
-    <div className="flex flex-col justify-center items-start sm:absolute sm:top-[30%] sm:left-[8%] sm:w-[60%] sm:z-10 text-left p-4 sm:p-0 md:mt-50 font-sans">
-      <h1 className="text-black sm:text-container text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
+    <div className="flex flex-col justify-center items-start bg-body sm:bg-transparent sm:absolute sm:top-[30%] sm:left-[8%] sm:w-[60%] sm:z-10 text-left p-4 sm:p-0 md:mt-50 font-sansk">
+      <h1 className="text-title drop-shadow-lg sm:text-body text-4xl md:text-5xl lg:text-6xl xl:text-7xl">
         Tu lugar único para
         <br />
         reparaciones de <br />
         dispositivos.
       </h1>
-      <h2 className="text-black sm:text-container text-1xl md:text-1xl lg:text-1xl xl:text-1xl mt-5 ">
+      <h2 className="text-subtitle sm:text-body text-1xl md:text-1xl lg:text-1xl xl:text-1xl mt-5 ">
         Especializados en reparación y mantenimiento,
         <br /> actualizaciones de Hardware e instalación de Software
       </h2>
@@ -22,8 +21,8 @@ const TextSwiper = () => {
         </button> */}
         <Btn
           text="Reserva tu reparación"
-          bgColor="bg-yellow-400"
-          textColor="text-black"
+          textColor="text-title"
+          borderColor="border-none"
           disableHover={false}
           className="mt-5"
         />

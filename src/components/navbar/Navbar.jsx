@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Btn from "../btn/Btn";
-// Importar los íconos de Lucide React
-import { Menu, X } from "lucide-react"; // Cambié la importación de react-feather a lucide-react
+
+import { Menu, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full px-6 py-4 bg-transparent backdrop-blur-md text-white z-50">
+    <nav className="fixed w-full top-0 px-6 py-4 bg-body backdrop-blur-md text-title z-50">
       {/* Degradado interno */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="w-full h-full bg-gradient-to-b from-black/25 via-transparent to-transparent" />
@@ -28,7 +29,17 @@ export default function Navbar() {
           </div>
         </div>
 
-        <Btn text="+3777674366"></Btn>
+        <Btn
+          className="px-2 font-medium flex items-center gap-2"
+          text={
+            <>
+              <FaWhatsapp className="w-6 h-6 text-green-500" />
+              +3777-674-366
+            </>
+          }
+          bgColor="bg-white"
+          hoverUnderline={true}
+        />
       </div>
 
       {/* Menú hamburguesa desplegable (solo en móvil) */}
@@ -62,14 +73,17 @@ export default function Navbar() {
             Contacto
           </a>
         </div>
-        <div className="w-48 flex justify-end">
-          <a
-            href="tel:+1234567890"
-            className="bg-buttonHover  text-white font-semibold py-2 px-4 rounded-lg text-base transition"
-          >
-            📞+3777 67-4366
-          </a>
-        </div>
+        <Btn
+          className="px-4 font-medium flex items-center gap-2"
+          text={
+            <>
+              <FaWhatsapp className="w-5 h-5 text-green-500" />
+              +3777-674-366
+            </>
+          }
+          bgColor="bg-white"
+          hoverUnderline={true}
+        />
       </div>
     </nav>
   );
