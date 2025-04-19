@@ -1,30 +1,41 @@
 import React from "react";
-import { featuredImages } from "../../assets/data/dataStore"; // ← esta es la clave
-
+import { featuredImages } from "../../assets/data/dataStore";
+import Btn from "../btn/Btn";
 const FeaturedServices = () => {
   return (
-    <section className="py-16 px-6 bg-white">
-      <h1 className="text-5xl font-bold text-center justify-between mb-20 mt-20">
-        Servicios que ofrecemos
-      </h1>
-      <div className="flex flex-wrap justify-center gap-8">
+    <section className="py-16 px-6 bg-body">
+      {/* Contenedor del título y botón */}
+      <div className="flex items-center justify-between flex-wrap mb-10 mt-10 px-4  ">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-title md:ml-16 text-left -mt-14 -ml-5 md:mt-0">
+          Servicios que <br /> ofrecemos
+        </h1>
+
+        {/* Botón a la derecha */}
+        <Btn
+          className="mt-9 -ml-1 sm:mt-0 px-4 font-medium flex items-center gap-2 mr-0 sm:mr-20"
+          borderColor="border-none"
+        />
+      </div>
+
+      {/* Cards */}
+      <div className="flex flex-wrap justify-center gap-9 mt-16">
         {featuredImages.map((item, index) => (
           <div
             key={index}
-            className="relative w-80 h-96 bg-[#fef08a] rounded-xl overflow-hidden shadow-md"
+            className={`relative w-96 h-120 ${item.bgColor} rounded-xl overflow-hidden shadow-md`}
           >
-            {/* Imagen con clip-path */}
-            <div className="relative h-48 w-full">
+            <div className="relative h-80 w-full">
               <img
                 src={item.image}
                 alt={item.title}
                 className="h-full w-full object-cover clip-arrow"
               />
             </div>
-            {/* Texto */}
             <div className="p-6 mt-10">
-              <h2 className="text-xl font-semibold">{item.title}</h2>
-              <h3 className="text-gray-600 mt-2">{item.subtitle}</h3>
+              <h2 className={`text-xl font-semibold ${item.textColor}`}>
+                {item.title}
+              </h2>
+              <h3 className={`mt-2 ${item.textColor}`}>{item.subtitle}</h3>
             </div>
           </div>
         ))}

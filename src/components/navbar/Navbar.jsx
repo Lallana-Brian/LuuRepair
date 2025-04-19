@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed w-full px-6 py-4 bg-transparent backdrop-blur-md text-white z-50">
+    <nav className="fixed w-full top-0 px-6 py-4 bg-body backdrop-blur-md text-title z-50">
       {/* Degradado interno */}
       <div className="absolute inset-0 pointer-events-none z-0">
         <div className="w-full h-full bg-gradient-to-b from-black/25 via-transparent to-transparent" />

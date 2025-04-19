@@ -7,7 +7,7 @@ const ReusableSwiper = () => {
   return (
     <>
       {/* Contenedor del Swiper */}
-      <div className="w-full h-[45vh] sm:h-[100vh] sm:top-0 md:h[20vh] top-0 overflow-hidden flex items-center justify-center ">
+      <div className="w-full h-[45vh] sm:h-[100vh] sm:top-0 md:h[20vh] mt-14 overflow-hidden flex items-center justify-center bg-body">
         <Swiper
           modules={[Autoplay]}
           spaceBetween={0}
@@ -28,8 +28,7 @@ const ReusableSwiper = () => {
                     alt={slide.alt}
                     className="w-full h-full object-cover"
                   />
-
-                  <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-transparent z-10" />
+                  <div className="absolute top-0 left-0 w-full h-5/6 bg-gradient-to-b from-black/100 via-black/60 to-transparent z-10" />
                 </div>
               </div>
             </SwiperSlide>
